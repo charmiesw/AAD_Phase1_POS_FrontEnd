@@ -1,0 +1,368 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>P O S</title>
+    <link rel="icon" href="assets//images/logo.png">
+    <link rel="stylesheet" href="css/index.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+</head>
+<body>
+
+    <!-- HOME PAGE -->
+
+    <div id="bar" class="bar">
+        <div class="bar-container">
+
+            <!-- Navigation bar -->
+                <nav>
+                    <img src="assets/images/logo.png" class="logo" alt="logo">
+                    <ul>
+                        <li><a href="#">HOME</a></li>
+                        <li><a href="#customer">CUSTOMERS</a></li>
+                        <li><a href="#item">ITEMS</a></li>
+                        <li><a href="#orders">ORDERS</a></li>
+                    </ul>
+                </nav>
+        </div>
+    </div>  
+
+    <!-- CUSTOMER SECTION -->
+
+    <main id="customer" class="bg pt-cus">
+
+        <!-- Title & Search bar -->
+        <div class="d-flex justify-content-center align-items-center gap-5 m-cus-head">
+            <h1 class="text-light fs-cus col-6">C U S T O M E R &nbsp; <i class="fa-solid fa-user-tie"></i></h1>
+            <input type="text" class="form-control text-white" placeholder="Id, Name, Address, Contact" id="searchCus">
+            <button type="button" class="btn col search" id="btnSearch">Search</button>
+        </div>
+
+        <!-- Customer details form -->
+        <section class="row p-4 m-0 object-fit-contain"> 
+            <div class="col-6  m-3 object-fit-contain">
+                <form class="m-5">
+                    <div class="mb-3 d-flex">
+                        <label for="cusId" class="form-label text-white  w-75 ">ID : </label>
+                        <input type="text" class="form-control text-white" id="cusId">
+                    </div>
+                    <div class="mb-3 d-flex">
+                        <label for="cusName" class="form-label text-white w-75">Name : </label>
+                        <input type="text" class="form-control text-white" id="cusName">
+                    </div>
+                    <div class="mb-3 d-flex">
+                        <label for="cusAddress" class="form-label text-white w-75">Address : </label>
+                        <input type="text" class="form-control  text-white  " id="cusAddress">
+                    </div>
+                    <div class="mb-3 d-flex">
+                        <label for="cusContact" class="form-label text-white w-75">Contact : </label>
+                        <input type="tel" class="form-control  text-white  " id="cusContact">
+                    </div>
+
+                    <div class="row m-0 gap-2 mt-5">
+                        <button type="button" class="btn col save" id="onActionSave">R E G I S T E R</button>
+                    </div>
+                </form>
+            </div>
+
+            <!-- Table of customer details -->
+            <div class="col-5 border-white m-3 border-start">
+                <div class="table-container">
+                    <table class="table table-hover text-white" id="tblcustomer">
+                        <thead class="text-white ">
+                        <tr>
+                            <th scope = "col">ID</th>
+                            <th scope = "col">Name</th>
+                            <th scope = "col">Address</th>
+                            <th scope = "col">Contact</th>
+                            <th scope = "col">Action</th>
+                        </tr>
+                        </thead>
+                        <tbody  id="customerTbody">
+                            <tr></tr>
+                        </tbody>
+                    </table>
+                </div>  
+            </div>
+            
+        </section>
+    </main>
+
+    <!-- ITEMS SECTION -->
+
+    <main id="item" class="bg pt-item">
+
+        <!-- Title & Search bar -->
+        <div class="d-flex justify-content-center align-items-center gap-5 m-cus-head">
+            <h1 class="text-light fs-cus col-6">I T E M &nbsp; <i class="fa-solid fa-martini-glass"></i></h1>
+            <input type="text" class="form-control text-white" placeholder="Code, Name, Quantity, Unit Price" id="searchItem">
+            <button type="button" class="btn col search" id="btnSearchItem">Search</button>
+        </div>
+
+        <!-- Item details form -->
+        <section class="row p-4 m-0 object-fit-contain"> 
+            <div class="col-6  m-3 object-fit-contain">
+                <form class="m-5">
+                    <div class="mb-3 d-flex">
+                        <label for="itemCode" class="form-label text-white  w-75 ">Item Code : </label>
+                        <input type="text" class="form-control text-white" id="itemCode">
+                    </div>
+                    <div class="mb-3 d-flex">
+                        <label for="itemName" class="form-label text-white w-75">Item Name : </label>
+                        <input type="text" class="form-control text-white" id="itemName">
+                    </div>
+                    <div class="mb-3 d-flex">
+                        <label for="quantity" class="form-label text-white w-75">Quantity : </label>
+                        <input type="text" class="form-control  text-white  " id="quantity">
+                    </div>
+                    <div class="mb-3 d-flex">
+                        <label for="uPrice" class="form-label text-white w-75">Unit Price : </label>
+                        <input type="text" class="form-control  text-white  " id="uPrice">
+                    </div>
+                    
+                    <div class="row m-0 gap-2 mt-5">
+                        <button type="button" class="btn col save" id="onActionSaveItem">A D D</button>
+                    </div>
+                </form>
+            </div>
+
+            <!-- Table of item details -->
+            <div class="col-5 border-white m-3 border-start">
+                <div class="table-container">
+                    <table class="table table-hover text-white" id="tblItem">
+                        <thead class="text-white ">
+                        <tr>
+                            <th scope="col">Code</th>
+                            <th scope="col">Name</th>
+                            <th scope="col">Quantity</th>
+                            <th scope="col">Unit Price</th>
+                            <th scope="col">Action</th>
+                        </tr>
+                        </thead>
+                        <tbody  id="itemTbody">
+                        <tr></tr>
+                        </tbody>
+                    </table>
+                </div>
+                
+            </div>
+        </section>
+    </main>
+
+    <!-- ORDER SECTION -->
+
+    <main id="orders" class="bg pt-pla-or">
+
+        <!-- Title -->
+        <h1 class="text-center text-light fs-cus mb-5">P L A C E &nbsp; O R D E R &nbsp; <i class="fa-solid fa-champagne-glasses"></i></h1>
+
+        <section class="row p-4 m-0">
+            <div class="col m-3 border">
+
+                <!-- Order details section -->
+                <div class="row">
+                    <h5 class="text-white mb-5 mt-3 fw-bold">Order Details</h5>
+                    <form class=" me-3">
+
+                        <div class="row border-bottom border-white">
+                            <div class="col mb-4 d-flex">
+                                <label for="InputOID" class="form-label text-white w-50">Order ID : </label>
+                                <input type="text"
+                                       class="form-control bg-transparent  border-white text-white"
+                                       id="InputOID" readonly>
+                            </div>
+                            <div class="col mb-4 d-flex ">
+                                <label for="InputDate" class="form-label text-white w-50 ">Date : </label>
+                                <input type="text"
+                                       class="form-control bg-transparent  border-white text-white"
+                                       id="InputDate">
+                            </div>
+                        </div>
+                        
+                        <!-- Customer details section -->
+                        <div class="d-flex mt-5 mb-5">
+                            <h5 class="text-white w-50 fw-bold">Customer Details</h5>
+                            <input type="text"
+                                       class="form-control bg-transparent  border-white text-white"
+                                       id="filterInputCusName" placeholder="Select customer" list="cmbCusNames">
+                            <datalist id="cmbCusNames" class="bg-transparent ">
+                                    <option selected></option>
+                            </datalist>
+                        </div>
+    
+                        <div class="row border-white">
+                            <div class="mb-4 col d-flex ">
+                                <label for="selectedCusId" class="form-label text-white w-75">Customer ID : </label>
+                                <input type="text"
+                                       class="form-control bg-transparent  border-white text-white"
+                                       id="selectedCusId" readonly>
+                            </div>
+                            <div class="col mb-4 d-flex ">
+                                <label for="selectedCusName" class="form-label text-white w-75 ">Customer Name : </label>
+                                <input type="text"
+                                       class="form-control bg-transparent  border-white text-white "
+                                       id="selectedCusName" readonly>
+                            </div>
+                        </div>
+    
+                        <!-- Item details section -->
+                        <div class="d-flex mt-5 mb-5 ">
+                            <h5 class="text-white w-75 fw-bold">Item Details</h5>
+                            <input type="text"
+                                       class="form-control bg-transparent border-white text-white"
+                                       id="filterInputItemName" placeholder="Select item" list="cmbItemNames">
+                            <datalist id="cmbItemNames" class="bg-transparent ">
+                                <option selected></option>
+                            </datalist>
+                        </div>
+    
+                        <div class="row">
+                            <div class="mb-4 col d-flex ">
+                                <label for="selectedItemCode" class="form-label text-white w-50 ">Item Code : </label>
+                                <input type="text"
+                                       class="form-control bg-transparent  border-white text-white"
+                                       id="selectedItemCode" readonly>
+                            </div>
+                            <div class="col mb-4 d-flex ">
+                                <label for="selectedItemName" class="form-label text-white w-50">Name : </label>
+                                <input type="text"
+                                       class="form-control bg-transparent  border-white text-white "
+                                       id="selectedItemName" readonly>
+                            </div>
+                        </div>
+
+                        <div class="row">    
+                            <div class="mb-4 col d-flex">
+                                <label for="selectedItemUP" class="form-label text-white w-50">Unit Price : </label>
+                                <input type="text"
+                                       class="form-control bg-transparent  border-white text-white "
+                                       id="selectedItemUP" readonly>
+                            </div>
+    
+                            <div class="mb-4 col d-flex ">
+                                <label for="selectedQty" class="form-label text-white w-50">Quantity : </label>
+                                <input type="number"
+                                       class="form-control bg-transparent  border-white text-white "
+                                       id="selectedQty">
+                            </div>
+                        </div>
+                    </form>
+                </div>
+    
+                <!-- Button add to cart -->
+                <button class="btn btn-addCart container-fluid  mt-5 mb-5 fw-bold " type="button" id="btnAddToCart">ADD TO CART</button>
+            </div>
+    
+            <!-- Cart -->
+            <div class="col m-3 ">
+                <div class="border border-white ">
+                    <h5 class="text-white mb-5 text-center mt-3 fw-bold">Cart</h5>
+                    <table class="table table-hover text-white " id="tblPlaceOrder">
+                        <thead class="text-warning">
+                        <tr>
+                            <th scope="col">Code</th>
+                            <th scope="col">Name</th>
+                            <th scope="col">Price</th>
+                            <th scope="col">Quantity</th>
+                            <th scope="col">Total</th>
+                            <th scope="col">Action</th>
+                        </tr>
+                        </thead>
+                        <tbody id="tBodyPlaceOrder">
+                        <tr></tr>
+                        </tbody>
+                    </table>
+                </div>
+
+                <!-- Purchase order Section -->
+                <div class="row mt-5 border border-white">
+                    <h5 class="text-white text-center  mb-5 mt-3 fw-bold">Purchase Order</h5>
+                    <div class="row">
+                        <div class="mb-4 col d-flex ">
+                            <label for="inputTotal" class="form-label text-white w-50 ">Total : </label>
+                            <input type="number"
+                                   class="form-control bg-transparent  border-white text-white"
+                                   id="inputTotal" readonly>
+                        </div>
+                    </div>
+    
+                    <div class="row">
+                        <div class="mb-4 col d-flex ">
+                            <label for="inputCash" class="form-label text-white w-50">Cash : </label>
+                            <input type="number"
+                                   class="form-control bg-transparent  border-white text-white"
+                                   id="inputCash">
+                        </div>
+    
+                        <div class="mb-4 col d-flex ">
+                            <label for="balance" class="form-label text-white w-50">Balance : </label>
+                            <input type="number"
+                                   class="form-control bg-transparent  border-white text-white"
+                                   id="balance" readonly>
+                        </div>
+    
+                    </div>
+
+                    <!-- Purchase order button -->
+                    <div class="row ms-1">
+                        <button class="btn btn-purch mt-5 mb-5 fw-bold " type="button" id="btnPurchase"> PURCHASE</button>
+                    </div>
+    
+                </div>
+            </div>
+        </section>
+
+        <!-- Order details table -->
+        <section class="row  m-auto object-fit-contain">
+            <table class="table table-hover text-white object-fit-contain" id="tableOrder">
+                <thead class="text-white">
+                <tr>
+                    <th scope="col">Order ID</th>
+                    <th scope="col">Customer ID</th>
+                    <th scope="col">Customer Name</th>
+                    <th scope="col">Date</th>
+                    <th scope="col">Item ID</th>
+                    <th scope="col">Item Name</th>
+                    <th scope="col">Unit Price</th>
+                    <th scope="col">Item QTY</th>
+                    <th scope="col">Total</th>
+                </tr>
+                </thead>
+                <tbody id="tblBodyOrders">
+                <tr></tr>
+                </tbody>
+            </table>
+        </section>
+    </main>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
+
+    <script src="/assets/jQuery/jquery-3.6.0.min.js"></script>
+
+    <!-- ========== CUSTOMER MANAGEMENT ========== -->
+    <script src="/controller/customerController.js"></script>
+
+    <!-- ========== ITEM MANAGEMENT ========== -->
+    <script src="/controller/itemController.js"></script>
+
+    <!-- ========== PLACE ORDER MANAGE ========== -->
+    <script src="/controller/orderDetailsController.js"></script>
+
+    <!-- ========== ORDER MANAGEMENT ========== -->
+    <script src="/controller/orderController.js"></script>
+
+    <script>
+        const navE1 = document.querySelector('nav');
+
+            window.addEventListener('scroll', () => {
+                if (window.scrollY >= 75) {
+                    navE1.classList.add('navbar-scrolled');
+                } else if(window.scrollY < 75) {
+                    navE1.classList.remove('navbar-scrolled');
+                }
+            })
+    </script>
+</body>
+</html>

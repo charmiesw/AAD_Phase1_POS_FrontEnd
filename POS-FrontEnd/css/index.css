@@ -1,0 +1,204 @@
+* {
+    margin: 0;
+    padding: 0;
+    font-family: 'Poppins', sans-serif;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    background: rgb(31, 29, 29);
+    color: white;
+}
+
+/* ========== HEADER ========== */
+
+.bar {
+    width: 100%;
+    height: 100vh;
+    background: rgb(31, 29, 29);
+    background-image: url(../assets/images/homepage.png);
+    background-size: cover;
+    background-position: center;
+}
+
+.bar-container {
+    padding: 5px 5px; 
+}
+
+nav {
+    position: fixed;
+    transition: all 0.5s;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+
+.navbar-scrolled {
+    background-color: rgba(75, 125, 92, 0.681);
+    box-shadow: 0 3px 10px rgba(0, 0, 0, 0.25);
+}
+
+.logo {
+    width: 50px;
+    height: 50px;
+}
+
+nav ul li {
+    display: inline-block;
+    list-style: none;
+    margin: 5px 15px;
+}
+
+nav ul li a {
+    color: white;
+    text-decoration: none;
+    font-size: 16px;
+    font-weight: bold;
+    position: relative;
+}
+
+nav a::after {
+    content: '';
+    width: 0;
+    height: 4px;
+    background: rgb(14, 126, 51);
+    position: absolute;
+    left: 0;
+    bottom: -6px;
+    transition: 0.5s;
+}
+
+nav a:hover::after {
+    width: 100%;
+}
+
+/* ========== SUB-PAGES ========== */
+
+.save {
+    background-color: #eabd07 !important;
+    color: white !important;
+    border-radius: 0px !important;
+    opacity: 0.8;
+    transition: 0.3s;
+}
+
+.save:hover {
+    opacity: 1;
+}
+
+.update {
+    background-color: #fd6500 !important;
+    color: white !important;
+    border-radius: 0px !important;
+    opacity: 0.8;
+    transition: 0.3s;
+}
+
+.update:hover {
+    opacity: 1;
+}
+
+.search {
+    background-color: #278a2a !important;
+    color: white !important;
+    border-radius: 0px !important;
+    opacity: 0.8;
+    transition: 0.3s;
+}
+
+.search:hover {
+    opacity: 1;
+}
+
+.bg {
+    background-color: rgba(75, 125, 92, 0.681);
+}
+
+.fs-cus {
+    font-size: 60px;
+    font-family: 'Times New Roman', Times, serif;
+    font-weight: bold;
+}
+
+.form-control {
+    background: transparent !important;
+    border: 1px solid white !important;
+    border-radius: 0px !important;
+}
+
+.form-control::placeholder{
+    color: rgb(133, 133, 133) !important;
+    font-size: 15px !important;
+}
+
+.table th {
+    background: transparent !important;
+    color: white !important;
+}
+
+td{
+    background: transparent !important;
+    color: white !important;
+}
+
+/* ========== CUSTOMER ========== */
+
+#customer {
+    height: 100vh;
+}
+
+.pt-cus {
+    padding-top: 150px;
+}
+
+.m-cus-head {
+    margin: 0 100px;
+}
+
+/* ========== ITEM ========== */
+
+#item {
+    height: 100vh;
+}
+
+.pt-item {
+    padding-top: 150px;
+}
+
+/* ========== PLACE ORDER ========== */
+
+#orders {
+    height: 100%;
+}
+
+.pt-pla-or {
+    padding-top: 100px;
+}
+
+.btn-addCart {
+    background: #278a2a !important;
+    color: white !important;
+    opacity: 0.8;
+    transition: 0.3s;
+}
+
+.btn-addCart:hover {
+    opacity: 1;
+}
+
+.btn-purch {
+    background: #eabd07 !important;
+    color: white !important;
+    opacity: 0.8;
+    transition: 0.3s;
+}
+
+.btn-purch:hover {
+    opacity: 1;
+}
+
